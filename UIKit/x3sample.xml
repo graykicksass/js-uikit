@@ -1,0 +1,13 @@
+<et:document xmlns:et="http://graysblog.org/">
+
+	<et:layout id="x3sample">
+		<et:container id="x3sample_container">
+		
+			<et:label id="x3sample_container_label" layout_width="wrap_content">Hello! I'm rendered from x3Sample</et:label>
+			<et:label id="x3sample_container_labeltwo" layout_width="wrap_content">Hello! I'm rendered from x3Sample</et:label>
+			<et:button id="x3sample_button" layout_width="wrap_content">Howdy, press me!</et:button>
+		
+		</et:container>
+	</et:layout>
+	
+</et:document>

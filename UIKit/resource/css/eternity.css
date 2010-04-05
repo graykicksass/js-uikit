@@ -1,0 +1,136 @@
+/* Eternity Prototype - Eternity CSS */
+
+/* elements */
+
+/* Text: E.G. Labels.. */
+
+.ETLabel {
+
+	/* Default positioning */
+	position: relative;
+	margin: 6px;
+	
+	/* Default Label */
+	font-size: 12px;
+	font-weight: normal;
+	
+	color: #5c626e; /* Default text color? */
+	
+	/* Default sizing */
+	width: auto;
+	height: auto;
+	
+}
+
+.ETLabelItalic {
+
+	/* This class is applied to an existing label to make it italic */
+	
+	font-style: italic;
+
+}
+
+/* Buttons */
+
+.ETButton {
+
+	
+	/* Default positioning */
+	position: relative;
+	
+	margin: 6px;
+	
+	/* Default Borders */
+	border-width: 0 5 0 5;
+	-moz-border-image: url(../images/button/off.png) 0 5 0 5 stretch stretch;
+	-webkit-border-image: url(../images/button/off.png) 0 5 0 5 stretch stretch;
+	
+	/* Default Padding */
+	padding: 3px;
+
+	/* Default Text Styling */
+	font-size: 12px;
+	font-weight: normal;
+	
+	color: #9aa1ad; /* Default text color? */
+	
+	/* Default sizing */
+	width: auto;
+	height: auto;
+
+}
+
+.ETWindowTitle {
+
+	/* Default Label */
+	font-size: 12px;
+	font-weight: bold;
+	
+	color: #5c626e; /* Default text color? */
+
+	margin-bottom: 9px;
+	padding: 1px;
+	
+	height: 11px;
+	
+}
+
+.ETButtonHover {
+
+	/* Default Selected Style */
+	border-width: 0 5 0 5;
+	-moz-border-image: url(../images/button/on.png) 0 5 0 5 stretch stretch;
+	-webkit-border-image: url(../images/button/on.png) 0 5 0 5 stretch stretch;
+
+}
+
+.ETButtonSelected {
+
+	/* Default Selected Style */
+	border-width: 0 5 0 5;
+	-moz-border-image: url(../images/button/on.png) 0 5 0 5 stretch stretch;
+	-webkit-border-image: url(../images/button/on.png) 0 5 0 5 stretch stretch;
+	
+	color: #808080;
+
+}
+
+/* Window */
+
+.ETWindow {
+
+	/* Default Size */
+
+	padding: 3px;
+
+	border-width: 5 5 5 5;
+	-moz-border-image: url(../images/window/border.png) 5 5 5 5 stretch stretch;
+	-webkit-border-image: url(../images/window/border.png) 5 5 5 5 stretch stretch;
+}
+
+.ETWindowContent {
+
+	padding: 3px;
+
+	border-width: 5 5 5 5;
+	-moz-border-image: url(../images/window/content.png) 5 5 5 5 stretch stretch;
+	-webkit-border-image: url(../images/window/content.png) 5 5 5 5 stretch stretch;
+}
+
+/* Text Field */
+
+.ETTextInput {
+
+	border-width: 0 5 0 5;
+	-moz-border-image: url(../images/field/off.png) 0 5 0 5 stretch stretch;
+	-webkit-border-image: url(../images/field/off.png) 0 5 0 5 stretch stretch;
+
+}
+
+.ETTextInputSelected {
+
+	border-width: 0 5 0 5;
+	-moz-border-image: url(../images/field/on.png) 0 5 0 5 stretch stretch;
+	-webkit-border-image: url(../images/field/on.png) 0 5 0 5 stretch stretch;
+
+}

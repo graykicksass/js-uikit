@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<title>Eternity Windowing / Rendering Engine testbench</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="resource/css/eternity.css" />
+		
+		<!-- prototype -->
+		<script type="text/javascript" src="prototype.js"></script>
+		
+		<!-- eternity -->
+		<script type="text/javascript" src="js/ETContext.js"></script>
+		<script type="text/javascript" src="js/ETElement.js"></script>
+		<script type="text/javascript" src="js/widgets/ETWidget.js"></script>
+		
+		<!-- Widgets -->
+		<script type="text/javascript" src="js/widgets/ETContainer.js"></script>
+		<script type="text/javascript" src="js/widgets/ETTextLabel.js"></script>
+		<script type="text/javascript" src="js/widgets/ETClockWidget.js"></script>
+		<script type="text/javascript" src="js/widgets/ETButton.js"></script>
+		<script type="text/javascript" src="js/widgets/ETWindow.js"></script>
+		<script type="text/javascript" src="js/widgets/ETWindowContent.js"></script>
+		
+		<!-- X3 -->
+		<script type="text/javascript" src="js/x3/X3Inflator.js"></script>
+		<script type="text/javascript" src="js/x3/X3TestLoader.js"></script> <!-- ugh -->
+		
+		<script type="text/javascript">
+		function loaded() {
+			// Eternity Test Scripts
+			var testlabel = new ETLabel(ETContextStatic, {
+			
+				id: 'testlabel',
+				state: true,
+				text: 'Hello World!'
+			
+			});
+			
+			var testlabeltwo = new ETLabel(ETContextStatic, {
+			
+				id: 'testlabeltwo',
+				state: true,
+				text: 'Hello World, Again!! (FYI: I\'m Selectable!! And aligned center!!)',
+				selectable: true,
+				align: 'center'
+			
+			});
+			
+			var sampleclock = new ETClockWidget(ETContextStatic, {
+			
+				id: 'testclock',
+				state: true
+			
+			});
+			
+			var TestContainer = new ETContainer(ETContextStatic, {
+			
+				id: 'testcontainer',
+				state: true,
+				absolute: true,
+				x: 500,
+				y: 500,
+				
+				width: 200,
+				height: 20
+			
+			});
+			
+			var TestWindow = new ETWindow(ETContextStatic, {
+			
+				id: 'testwindow',
+				state: true,
+				absolute: false,
+				x: 200,
+				y: 200,
+				
+				hasInnerContent: true
+			
+			});
+			
+			var testlabelthree = new ETLabel(TestContainer, {
+			
+				id: 'testlabelthree',
+				state: true,
+				text: 'Hello World, I\'m in a container!',
+			
+			});
+			
+			var testlabelfour = new ETLabel(TestWindow.content, {
+			
+				id: 'testlabelfour',
+				state: true,
+				text: 'Hello World, I\'m in a container! (also!)',
+			
+			});
+			
+			var testbutton = new ETButton(ETContextStatic, {
+			
+				id: 'testbutton',
+				state: true,
+				text: 'Sup, I\'m a button.',
+			
+			});
+			
+			testbutton.getElement().observe('click', function() {
+				
+				alert("You clicked the button!");
+			
+			});
+			
+			var anotherbutton = new ETButton(TestWindow.content, {
+			
+				id: 'testbutton2',
+				state: true,
+				text: 'Howdy!'
+			
+			});
+			
+			anotherbutton.getElement().observe('click', function() {
+			
+				alert("Why hello!");
+			
+			});
+			
+			//testxthree(); not ready yet.
+		
+		}
+		</script>
+		
+	</head>
+	
+<body onload="loaded();">
+
+	<div id="context">
+	</div>
+	
+</body>
+
+</html>
